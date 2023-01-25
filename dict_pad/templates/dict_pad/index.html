@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voice Dictation | HOME</title>
+    <link rel="stylesheet" href="{% static 'dict_pad/baseStyle.css' %}">
+</head>
+<body>
+    <h1>Welcome</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.media }}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
