@@ -8,10 +8,10 @@
 </head>
 <body>
     <h1>Voice Dictation</h1>
-    <form method="post">
+    <form method="post" action="{% url 'dict_pad:download' %}">
         {% csrf_token %}
         {{ form.media }}
-        {{ form.as_div }}
+        {{ form.as_p }}
         <button type="submit">Save</button>
     </form>
     <div class="controller">

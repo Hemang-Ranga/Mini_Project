@@ -42,19 +42,18 @@ INSTALLED_APPS = [
     # My Apps
     'dict_pad',
     'ckeditor',
-    'froala_editor',
 ]
 
 CKEDITOR_CONFIGS = {
     'default': {
-        'skin': 'moono',
+        'skin': 'moono-lisa',
         'toolbar':'Custom',
         'toolbar_Custom': [
             ['Bold', 'Italic', 'Underline'],
             ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
         ],
-        'height':600,
-        'width':600,
+        'height':300,
+        'width':800,
     },
 }
 
