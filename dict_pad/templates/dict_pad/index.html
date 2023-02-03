@@ -14,9 +14,12 @@
         {{ form.as_div }}
         <button type="submit">Save</button>
     </form>
-    <div>
-        <button type="button">Start</button>
-        <button type="button">Stop</button>
+    <div class="controller">
+        <button type="button" id="startBtn" onclick="myFunc()">Start</button>
+        <br>
+        <button type="button" id="stopBtn">Stop</button>
     </div>
+
+    <script src="{% static 'dict_pad/index.js' %}"></script>
 </body>
 </html>
