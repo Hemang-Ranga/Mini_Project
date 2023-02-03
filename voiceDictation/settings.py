@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # My Apps
     'dict_pad',
     'ckeditor',
+    'froala_editor',
 ]
 
 CKEDITOR_CONFIGS = {
