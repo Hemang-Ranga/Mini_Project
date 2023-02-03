@@ -24,10 +24,6 @@ startBtn.onclick = async ()=>{
       d.text = "Download"
       document.body.append(d);
     }
-
-    setTimeout(function(){
-      // mediaRecorder.stop();
-    },Infinity)
   }).catch((err)=>{
     window.alert(err.message);
   })
