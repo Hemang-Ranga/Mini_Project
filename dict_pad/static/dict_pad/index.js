@@ -15,7 +15,7 @@ startBtn.onclick = async ()=>{
     });
 
     mediaRecorder.onstop = function(){
-      let blob = new Blob(audioChunks, {'type':"audio/mp3"})
+      let blob = new Blob(audioChunks, {'type':"audio/wav"})
       audioChunks = [];
       let audioUrl = window.URL.createObjectURL(blob);
       var d = document.createElement('a');
