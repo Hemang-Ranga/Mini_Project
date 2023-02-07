@@ -8,12 +8,14 @@
 </head>
 <body>
     <h1>Voice Dictation</h1>
-    <form method="post" action="{% url 'dict_pad:download' %}">
-        {% csrf_token %}
-        {{ form.media }}
-        {{ form.as_p }}
-        <button type="submit">Save</button>
-    </form>
+    <div>
+        <form method="post" action="{% url 'dict_pad:download' %}">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <button type="submit">Save</button>
+        </form>
+    </div>
     <div class="controller">
         <button type="button" id="startBtn" onclick="myFunc()">Start</button>
         <br>
