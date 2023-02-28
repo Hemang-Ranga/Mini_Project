@@ -12,6 +12,7 @@ body{
     margin: 25px 500px;
 }
 .button-81 {
+  margin: 10px 10px 10px 10px;
   background-color: #fff;
   border: 0 solid #e2e8f0;
   border-radius: min(1vh,1vw);
@@ -37,6 +38,10 @@ body{
 .button-81:hover {
   background-color: #466eca;
   color: #fff;
+}
+
+.controller{
+  display: inline-block;
 }
 
 @media (min-width: 768px) {
