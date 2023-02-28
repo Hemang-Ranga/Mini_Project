@@ -10,6 +10,13 @@ def index(request):
     }
     return render(request, 'dict_pad/index.html',context=context)
 
+def first_page(request):
+    return render(request, 'dict_pad/first.html')
+
+def second_page(request):
+    return render(request, 'dict_pad/second.html')
+
+
 def download(request):
     file_data = ""
     if request.method=='POST':
