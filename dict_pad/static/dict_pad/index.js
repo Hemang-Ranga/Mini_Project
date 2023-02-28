@@ -17,12 +17,11 @@ startBtn.onclick = async ()=>{
     mediaRecorder.onstop = function(){
       let blob = new Blob(audioChunks, {'type':"audio/wav"})
       audioChunks = [];
-      let audioUrl = window.URL.createObjectURL(blob);
       var d = document.createElement('a');
       d.href = audioUrl;
       d.download = "myDownload";
       d.text = "Download"
-      document.body.append(d);
+      document.getElementById("dict_pad_Container").append(d);
     }
   }).catch((err)=>{
     window.alert(err.message);

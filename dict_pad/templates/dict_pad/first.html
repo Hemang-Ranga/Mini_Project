@@ -14,45 +14,24 @@
 	{% comment %} <link rel="stylesheet" href="assets/css/meyawo.css"> {% endcomment %}
 	<link rel="stylesheet" href="{% static 'dict_pad/assets/css/meyawo.css' %}">
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home_body">
 
     <!-- Page Navbar -->
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
         <div class="container">
-            <a class="logo" href="/public_html/index.html">Voice Dictation </a>         
-            <ul class="nav">
-                <li class="item">
-                    <a class="link" href="#home">Home</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#about">About</a>
-                </li>
-
-                <li class="item">
-                    <a class="link" href="#contact">feedback </a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#contact">Contact</a>
-                </li>
-                
-            </ul>
-            {% comment %} <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
-                <div class="hamburger-box">
-                  <div class="hamburger-inner"></div>
-                </div>
-            </a> {% endcomment %}
+            <a class="logo" href="#">Voice Dictation </a>
         </div>          
     </nav><!-- End of Page Navbar -->
 
     <!-- page header -->
     <header id="home" class="header">
         <div class="overlay"></div>
-        <div class="header-content container">
+        <div class="header-content container1">
             <h1 class="header-title">
-                <span class="up" ;>Hello!</span>
-                <!-- <span class="down">voice to text dictation</span>
+<!--                <span class="up" ;>Hello!</span>-->
+<!--                <span class="down">voice to text dictation</span>-->
             </h1>
-            <p class="header-subtitle">FRONTEND WEB DESIGNER</p>     -->
+<!--            <p class="header-subtitle">FRONTEND WEB DESIGNER</p>-->
             <a href="{% url 'dict_pad:second' %}">
                 <button class="btn btn-primary" href="#" >  Launch voice dictation </button>
             </a>
@@ -126,14 +105,14 @@
     </div> <!-- end of page footer -->
 	
 	<!-- core  -->
-    {% comment %} <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    {% comment %} <script src="{% static 'dict_pad/assets/vendors/jquery/jquery-3.4.1.js'%}"></script>
+    <script src="{% static 'dict_pad/assets/vendors/bootstrap/bootstrap.bundle.js'%}"></script>
 
     <!-- bootstrap 3 affix -->
-	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+	<script src="{% static 'dict_pad/assets/vendors/bootstrap/bootstrap.affix.js'%}"></script>
 
     <!-- Meyawo js -->
-    <script src="assets/js/meyawo.js"></script> {% endcomment %}
+    <script src="{% static 'dict_pad/assets/js/meyawo.js'%}"></script> {% endcomment %}
 
 </body>
 </html>

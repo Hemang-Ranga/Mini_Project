@@ -1,13 +1,3 @@
-body{
-    margin: 0;
-    padding: 0;
-    background: url("3.jpg") fixed;
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.3);
-    background-blend-mode:darken;
-}
 .textbox{
     margin: 25px 500px;
 }

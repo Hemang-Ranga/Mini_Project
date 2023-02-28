@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with Meyawo landing page.">
     <meta name="author" content="Devcrud">
-    <title>Voice dictation </title>
+    <title>Voice dictation</title>
     <!-- font icons -->
     <link rel="stylesheet" href="{% static 'dict_pad/assets/vendors/themify-icons/css/themify-icons.css' %}">
 	<link rel="stylesheet" href="{% static 'dict_pad/assets/css/meyawo.css' %}">
+    <link rel="stylesheet" href="{% static 'dict_pad/baseStyle.css' %}">
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-
-   
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home_body">
 
         <!-- Page Navbar -->
         <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
@@ -46,27 +45,26 @@
 
     <!-- page header -->
     <header id="home" class="header">
-        <div class="overlay"></div>
-        <div class="header-content container">
-            <h1 class="header-title">
-        </div> 
-        <form  style="padding-right: 16cm;" >
-            
-            <label>this is box for dictaion </label>
+        <div class="dict_pad_Container" style="display:block">
+            <div>
+                <form method="post" action="{% url 'dict_pad:download' %}">
+                    {% csrf_token %}
+                    {{ form.media }}
+                    {{ form.as_p }}
+                    <br>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </form>
+            </div>
             <br>
-            <textarea id="box" cols="80" rows="10">
-             dictation part 
-            </textarea>
-        </form>
-        <input type="submit" />
-        <br>
-        
-        
+            <div class="controller">
+                <button class="btn btn-primary" type="button" id="startBtn" onclick="myFunc()">Start</button>
+                <button class="btn btn-primary" type="button" id="stopBtn">Stop</button>
+            </div>
+        </div>
+
         
     </header>
     <!-- end of page header -->
-
-   
 
     <!-- footer -->
     <div class="container">
@@ -78,13 +76,14 @@
 	
 	<!-- core  -->
     <script src="{% static 'dict_pad/assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
-    <script src="{% static 'dict_pad/assets/vendors/bootstrap/bootstrap.bundle.js' %}></script>
+    <script src="{% static 'dict_pad/assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
 
     <!-- bootstrap 3 affix -->
-	<script src="{% static 'dict_pad/assets/vendors/bootstrap/bootstrap.affix.js'%}"></script>
+	<script src="{% static 'dict_pad/assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
 
     <!-- Meyawo js -->
     <script src="{% static 'dict_pad/assets/js/meyawo.js'%}"></script>
-
+    <!--    voice recording js-->
+    <script src="{% static 'dict_pad/index.js' %}"></script>
 </body>
 </html>

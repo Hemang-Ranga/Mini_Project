@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
- /* .main-banner:after {
+ .main-banner:after {
   content: '';
   background-image: url(../images/home\ page\ side.jpg)
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@
   top: 100px;
   width: 267px;
   height: 532px;
-}  */
+}
 
 .main-banner:before {
   content: '';
@@ -730,6 +730,7 @@ pre code {
 
 .container {
   width: 100%;
+  height: 100%
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;

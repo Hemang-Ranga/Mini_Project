@@ -14,7 +14,11 @@ def first_page(request):
     return render(request, 'dict_pad/first.html')
 
 def second_page(request):
-    return render(request, 'dict_pad/second.html')
+    form = PageForm(data={'content': ""})
+    context = {
+        'form': form
+    }
+    return render(request, 'dict_pad/second.html', context=context)
 
 
 def download(request):
