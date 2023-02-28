@@ -20,8 +20,8 @@ startBtn.onclick = async ()=>{
       var d = document.createElement('a');
       d.href = audioUrl;
       d.download = "myDownload";
-      d.text = "Download"
-      document.getElementById("dict_pad_Container").append(d);
+      d.text = "Download";
+      document.body.append(d);
     }
   }).catch((err)=>{
     window.alert(err.message);
