@@ -13,13 +13,13 @@
             {% csrf_token %}
             {{ form.media }}
             {{ form.as_p }}
-            <button type="submit">Save</button>
+            <button class="button-81" type="submit">Save</button>
         </form>
     </div>
     <div class="controller">
-        <button type="button" id="startBtn" onclick="myFunc()">Start</button>
+        <button class="button-81" type="button" id="startBtn" onclick="myFunc()">Start</button>
         <br>
-        <button type="button" id="stopBtn">Stop</button>
+        <button class="button-81" type="button" id="stopBtn">Stop</button>
     </div>
 
     <script src="{% static 'dict_pad/index.js' %}"></script>
